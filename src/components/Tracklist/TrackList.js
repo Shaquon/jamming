@@ -9,11 +9,10 @@ export class TrackList extends Component {
     }
 
     render() {
-        console.log('our tracks in Tracks component: ', this.props.tracks)
         return (
             <div className="TrackList">
-                {this.props.tracks.map((track) => {
-                    return <Track track={track} />
+                {this.props.tracks.map(function (track) {
+                    return <Track key={track.id} track={track} />
                 })}
             </div>
         )
